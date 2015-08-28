@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{173040B8-D7BD-4F6D-B20B-E357BE486680}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>ClassLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>NUnitReportExtension</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="nunit.core, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\NUnit.Runners.2.6.4\tools\lib\nunit.core.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.core.interfaces, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\NUnit.Runners.2.6.4\tools\lib\nunit.core.interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="NunitExtension\app.config" />
+    <None Include="NunitExtension\bin\Debug\ReportBuilder.dll.config" />
+    <None Include="NunitExtension\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="NunitExtension\obj\Debug\NUnitReportBuilder.csprojResolveAssemblyReference.cache" />
+    <None Include="NunitExtension\obj\Debug\ReportBuilder.csprojResolveAssemblyReference.cache" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NunitExtension\EventTracer.cs" />
+    <Compile Include="NunitExtension\MailResults.cs" />
+    <Compile Include="NunitExtension\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="NunitExtension\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="NunitExtension\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="NunitExtension\Properties\AssemblyInfo.cs" />
+    <Compile Include="NunitExtension\TestRecord.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NunitExtension\bin\Debug\nunit.core.dll" />
+    <Content Include="NunitExtension\bin\Debug\nunit.core.interfaces.dll" />
+    <Content Include="NunitExtension\bin\Debug\nunit.framework.dll" />
+    <Content Include="NunitExtension\bin\Debug\nunit.util.dll" />
+    <Content Include="NunitExtension\bin\Debug\ReportBuilder.dll" />
+    <Content Include="NunitExtension\bin\Debug\ReportBuilder.pdb" />
+    <Content Include="NunitExtension\bin\Debug\SeleniumTests.dll" />
+    <Content Include="NunitExtension\bin\Debug\SeleniumTests.pdb" />
+    <Content Include="NunitExtension\bin\Debug\WebDriver.dll" />
+    <Content Include="NunitExtension\bin\Debug\WebDriver.Support.dll" />
+    <Content Include="NunitExtension\bin\Debug\WebDriver.Support.xml" />
+    <Content Include="NunitExtension\bin\Debug\WebDriver.xml" />
+    <Content Include="NunitExtension\obj\Debug\NUnitReportBuilder.csproj.FileListAbsolute.txt" />
+    <Content Include="NunitExtension\obj\Debug\ReportBuilder.csproj.FileListAbsolute.txt" />
+    <Content Include="NunitExtension\obj\Debug\ReportBuilder.dll" />
+    <Content Include="NunitExtension\obj\Debug\ReportBuilder.pdb" />
+    <Content Include="NunitExtension\ReportBuilder.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NunitExtension\bin\Release\" />
+    <Folder Include="NunitExtension\obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
